@@ -95,7 +95,7 @@ footer {
     font-size: 0.9em;
 }
 
-@media (max-width: 200px) {
+@media (max-width: 700px) {
     .books-container {
         grid-template-columns: repeat(2, 1fr);
     }

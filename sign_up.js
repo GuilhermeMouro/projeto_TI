@@ -38,7 +38,7 @@ submit.addEventListener("click", function (event) {
     .then((userCredential) => {
       const user = userCredential.user;
       alert("Conta criada com sucesso!");
-      window.location.href = "pagina_inicial.html"; // Substitua pelo link desejado
+      window.location.href = "index.html"; // Substitua pelo link desejado
     })
     .catch((error) => {
       const errorCode = error.code;

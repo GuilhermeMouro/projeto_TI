@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper's Ink</title>
+    <title>Paper's Ink - Login</title>
     <link rel="stylesheet" href="styles.css">
     <script type="module" src="account_setup.js" defer></script>
 </head>
@@ -15,24 +15,20 @@
                 <h1>PAPER'S INK</h1>
             </div>
         </div>
-    </header> 
+    </header>
 
     <main>
         <div class="form-container">
-            <form id="sign-up-form">
-                <h2>Criar Conta</h2>
+            <form id="sign-in-form">
+                <h2>Iniciar Sessão</h2>
 
-                <input type="text" id="username" name="username" placeholder="Utilizador" required>
-
-                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="email" id="email" name="email" placeholder="Email ou Utilizador" required>
 
                 <input type="password" id="password" name="password" placeholder="Palavra Passe" required>
 
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme a Palavra Passe" required>
-
-                <button type="submit" id="submit">Criar Conta</button>
+                <button type="submit" id="submit">Login</button>
             </form>
-            <p>Já tem uma conta? <a href="sign_in.html">Inicie Sessão</a>.</p>
+            <p>Não tem uma conta? <a href="sign_up.html">Crie uma aqui</a>.</p>
         </div>
     </main>
 </body>

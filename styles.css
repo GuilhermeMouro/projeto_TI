@@ -6,10 +6,19 @@ body {
     padding: 0;
 }
 
+body.background-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                      url('img/backgorund-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
 header {
     background-color: goldenrod;
     color: #fff;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 header .container {
@@ -21,28 +30,61 @@ header .container {
     padding: 0 20px;
 }
 
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 header h1 {
     margin: 0;
     font-size: 2.2em;
     text-transform: uppercase;
 }
 
-nav ul {
+header img {
+    width: 60px;
+    height: 60px;
+}
+
+
+header nav ul {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
     gap: 20px;
 }
 
-nav ul li a {
-    color: #fff;
+header nav ul li a {
     text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #00bcd4;
+header nav ul li a:hover {
+    color: #ffd700;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h2 {
+    font-size: 2em;
+    color: #ffd700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main p {
+    line-height: 1.6;
+    color: #ccc;
+    font-size: 1.1em;
 }
 
 .books-container {
@@ -87,6 +129,71 @@ nav ul li a:hover {
     color: #ccc;
 }
 
+
+.form-container {
+    background: #292929;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form h2 {
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 12px;
+    background-color: goldenrod;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #daa520;
+}
+
+form p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+form p a {
+    color: goldenrod;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+
 footer {
     text-align: center;
     padding: 10px 0;
@@ -96,7 +203,30 @@ footer {
 }
 
 @media (max-width: 700px) {
+    .form-container {
+        padding: 30px;
+    }
     .books-container {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        justify-content: center;
     }
 }

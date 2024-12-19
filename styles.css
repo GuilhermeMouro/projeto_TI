@@ -113,11 +113,11 @@ main p {
 
 .book-rating {
     font-size: 1.2em;
-    color: #ffd700;
     margin: 10px 0;
 }
 
 .book-title {
+    color: #ffd700;
     font-size: 1.5em;
     font-weight: bold;
     margin: 10px 0;

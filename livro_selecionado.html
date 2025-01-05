@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper's Ink</title>
+    <title>Detalhes do Livro</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="books_setup.js" defer></script>
 </head>
 <body>
-
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/icon-logo.png">
+                <h1><a href="index.html">PAPER'S INK</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="listagem_novidades.html">Novidades</a></li>
+                    <li><a href="litsagem_livros.html">Livros</a></li>
+                    <li><a href="sign_in.html">Conta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="book-details">
+            <img class="book-image" src="img/default-book.jpg" alt="Capa do livro">
+            <h2 class="book-title"></h2>
+            <p class="book-author"></p>
+            <p class="book-description"></p>
+            <p class="book-genres"></p>
+        </div>
+    </main>
     <footer>
         <div class="container">
             <p>&copy; 2024 Guilherme Mouro. Todos os direitos reservados.</p>
@@ -15,4 +39,3 @@
     </footer>
 </body>
 </html>
-

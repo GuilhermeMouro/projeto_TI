@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paper's Ink</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="module" src="account_setup.js" defer></script>
+    <script type="module" src="books_setup.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,16 +16,30 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="listagem_novidades.html">Novidades</a></li>
-                    <li><a href="litsagem_livros.html">Livros</a></li>
+                    <li><a href="index.html">Livros</a></li>
                     <li><a href="sign_in.html">Conta</a></li>
                 </ul>
             </nav>
         </div>
-    </header>    
+    </header>
+    <div class="filters-container">
+        <fieldset>
+            <legend>Filtrar por Gênero</legend>
+            <label><input type="checkbox" value="Literatura Fantástica" class="genre-checkbox"> Literatura Fantástica</label>
+            <label><input type="checkbox" value="Ficção Científica" class="genre-checkbox"> Ficção Científica</label>
+            <label><input type="checkbox" value="Policial Thriller" class="genre-checkbox"> Policial Thriller</label>
+            <label><input type="checkbox" value="Memórias e Testemunhos" class="genre-checkbox"> Memórias e Testemulhos</label>
+
+        </fieldset>
+        <button id="apply-filters">Filtrar</button>
+    </div>
+    
+    <div class="books-container">
+    </div>
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Guilherme Mouro. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Guilherme Mouro. Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>

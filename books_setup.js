@@ -94,12 +94,10 @@ async function fetchBookDetails() {
 
         const book = bookDoc.data();
 
-        document.querySelector(".book-title").textContent = book.name;
-        document.querySelector(".book-author").textContent = `Autor: ${book.author}`;
-        document.querySelector(".book-description").textContent = book.description;
-        document.querySelector(".book-genres").textContent = `Gêneros: ${book.genres.join(", ")}`;
-        document.querySelector(".book-image").src = book.image ? book.image : "img/default-book.jpg";
-        document.querySelector(".book-image").alt = `Capa de ${book.name}`;
+        document.querySelector(".book-detail-title").textContent = book.name;
+        document.querySelector(".book-detail-author").textContent = `de ${book.author}`;
+        document.querySelector(".book-detail-description").textContent = book.description;
+        document.querySelector(".book-detail-image").src = book.image;
     } catch (error) {
         console.error("Erro ao buscar os detalhes do livro:", error);
     }

@@ -1,3 +1,4 @@
+/* Estilos Globais */
 body {
     background-color: #1a1a1a;
     color: #fff;
@@ -15,6 +16,7 @@ body.background-page {
     background-repeat: no-repeat;
 }
 
+/* Header */
 header {
     background-color: goldenrod;
     color: #fff;
@@ -66,6 +68,7 @@ header nav ul li a:hover {
     color: #ffd700;
 }
 
+/* Main */
 main {
     padding: 20px;
     max-width: 1200px;
@@ -83,8 +86,10 @@ main p {
     line-height: 1.6;
     color: #ccc;
     font-size: 1.1em;
+    text-align: justify;
 }
 
+/* Filtros */
 .filters-container {
     display: flex;
     flex-direction: column;
@@ -131,10 +136,10 @@ main p {
     background-color: #daa520;
 }
 
-
+/* Livros */
 .books-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     max-width: 1200px;
     margin: 40px auto;
@@ -144,7 +149,7 @@ main p {
 
 .book {
     text-align: center;
-    width: 18%; 
+    width: 18%;
     background-color: #292929;
     color: #333;
     border-radius: 5px;
@@ -173,47 +178,56 @@ main p {
     color: goldenrod;
 }
 
-.book-author {
-    font-size: 0.9em;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.book-genres {
+.book-author, .book-genres {
     font-size: 0.85em;
     color: #fff;
 }
 
-.book-details-container {
-    max-width: 800px;
-    margin: 40px auto;
+/* Detalhes do Livro */
+.book-details {
+    display: flex;
+    align-items: flex-start;
     background: #292929;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     color: #fff;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    gap: 20px;
 }
 
-.book-detail-image {
-    max-width: 100%;
+.book-details .book-detail-image {
+    width: 300px;
     height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
+}
+
+.book-detail-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
 }
 
 .book-detail-title {
-    font-size: 2em;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
     color: goldenrod;
+    text-align: left;
+}
+
+.book-detail-content .book-detail-author {
+    font-size: 1.8em;
     margin-bottom: 10px;
 }
 
-.book-detail-author, .book-detail-genres, .book-detail-description {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-    line-height: 1.6;
+.book-detail-content .book-detail-description {
+    font-size: 0.8em;
+    line-height: 1.8;
 }
 
-
+/* Formulário */
 .form-container {
     background: #292929;
     padding: 40px;
@@ -224,7 +238,6 @@ main p {
 }
 
 form {
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -237,14 +250,12 @@ form h2 {
 }
 
 form input {
-    width: 100%;
     padding: 12px;
     border: 1px solid #444;
     border-radius: 5px;
     background: #1a1a1a;
     color: #fff;
     font-size: 1em;
-    box-sizing: border-box;
 }
 
 form button {
@@ -260,24 +271,10 @@ form button {
 }
 
 form button:hover {
-    background-color: goldenrod;
+    background-color: #daa520;
 }
 
-form p {
-    text-align: center;
-    margin-top: 10px;
-}
-
-form p a {
-    color: goldenrod;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-form p a:hover {
-    text-decoration: underline;
-}
-
+/* Footer */
 footer {
     text-align: center;
     padding: 10px 0;
@@ -286,13 +283,18 @@ footer {
     font-size: 0.9em;
 }
 
+/* Media Queries */
 @media (max-width: 700px) {
-    .form-container {
-        padding: 30px;
-    }
     .books-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 30px;
+    }
+
+    .book {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
     }
 }
 
@@ -302,15 +304,19 @@ footer {
         text-align: center;
     }
 
-    header h1 {
-        margin-bottom: 10px;
-    }
-
     header img {
         margin-bottom: 10px;
     }
 
     header nav ul {
         justify-content: center;
+    }
+
+    .books-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .book {
+        max-width: 180px;
     }
 }
